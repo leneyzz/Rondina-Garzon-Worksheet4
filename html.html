@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rondina-Garzon-Worksheet4</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: "Imperial";
+            margin: 0;
+            padding: 0;
+            background-color: #4ec3c3;
+            color: #fff; 
+        }
+
+        header {
+            background-color: #0c0c0c;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        .main-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .image-container {
+            border: 2px solid #565256; 
+            border-radius: 50%;
+            padding: 0; 
+            display: inline-block; 
+            overflow: hidden; 
+            width: 200px; 
+            height: 200px; 
+        }
+
+        .image-container img {
+            max-width: 131%;
+            height: auto; 
+            display: block; 
+            margin: -10%; 
+        }
+
+        h1 {
+            font-size: 36px;
+            font-family: "Dream Cake", cursive; 
+            margin-top: 0; 
+        }
+
+        p {
+            font-size: 18px; 
+            line-height: 1.6;
+        }
+
+       
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #111010;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 600px) {
+            nav ul {
+                display: block;
+            }
+
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            nav ul li a {
+                display: block;
+            }
+        }
+    </style>
+
+ 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#" id="contactBtn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="main-content">
+        <h1>Gorgeous Cosmetics💄</h1>
+        <div class="image-container">
+            <img src="C:\Users\hp\OneDrive\Pictures\photo_6163561400618826364_y.jpg" alt="Tech Solutions Logo">
+        </div>
+        <p>Welcome to a full Beauty & Co Experience.</p>
+        <p>This cosmetic site we will open soon. See you!.</p>
+    </section>
+
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Information</h2>
+            <p>Email: info@beautyco.com</p>
+            <p>Phone: 09513987719</p>
+         
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Gorgeous Ph. All rights reserved.</p>
+    </footer>
+
+    <script>
+        
+        var contactBtn = document.getElementById("contactBtn");
+
+
+        var modal = document.getElementById("contactModal");
+
+
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        
+   
+     contactBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+       
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+       
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
